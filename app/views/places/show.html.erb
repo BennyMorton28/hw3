@@ -2,9 +2,17 @@
 
 <h1><%=@place["name"]%></h1>
 
+<%for entry in @entries%>
+<ul>
+<h3><%=entry["title"]%></h3>
+<p><%=entry["posted_on"]%></p>
+<h4><%=entry["description"]%></h4>
+</ul>
+<%end%>
 
 <p>
-  (Entries to be added for part II ...)
+  <a href="/entries/new?place_id=<%=@place["id"]%>">New Entry</a>
+
 </p>
 
 <p>

@@ -9,8 +9,7 @@ class PlacesController < ApplicationController
   def show
     # find a Place
     @place = Place.find_by({"id" => params["id"]})
-   # @contacts = Contact.where({"company_id" => @company["id"]})
-
+    @entries = Entry.where({"place_id" => @place["id"]})
     # render companies/show view with details about Company
   end
   
