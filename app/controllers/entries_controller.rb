@@ -6,13 +6,6 @@ def new
   # render entries/new view with new Entry form
 end
 
-def show
-  @entry = Entry.find_by({"id" => params["id"]})
-  @entry = Place.find_by({"id" => @entry["place_id"]})
-
-end 
-
-
 
   def create
     # start with a new Entry
@@ -26,3 +19,11 @@ end
     redirect_to "/places/#{@entry["place_id"]}"
     end
   end 
+
+
+#dont need this
+# def show
+#   @entry = Entry.find_by({"id" => params["id"]})
+#   @entry = Place.find_by({"id" => @entry["place_id"]})
+
+# end 
